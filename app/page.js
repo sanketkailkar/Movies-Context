@@ -1,12 +1,12 @@
 "use client"
-import MainPage from './mainpage/page'
-import { AppContextProvider } from './context'
+import Search from './search/page'
+import Movies from './movies/page'
 
 export default function Home() {
 
-  return (
-    <AppContextProvider>
-      <MainPage/>
-    </AppContextProvider>
+  return (<>
+    <Search />
+    <Movies />
+  </>
   )
 }

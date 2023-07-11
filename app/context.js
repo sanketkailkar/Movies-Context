@@ -1,6 +1,7 @@
 // Context API ( warehouse )
 // provider ( delivery )
 // customer ( you )
+'use client'
 import { createContext, useContext, useEffect, useState } from 'react';
 
 const API_URL = `https://www.omdbapi.com/?&apikey=${process.env.NEXT_PUBLIC_API_KEY}`;
