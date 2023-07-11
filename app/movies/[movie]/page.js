@@ -45,7 +45,7 @@ export default function Movie({ params }) {
       <section className="movie-section">
         <div className="col">
           <figure className="movie-figure">
-            <img src={movies.Poster} alt={movies.Title} className="movie-img"/>
+            <img src={movies.Poster} alt={movies.Title} className="movie-img" />
           </figure>
         </div>
         <div className="col">

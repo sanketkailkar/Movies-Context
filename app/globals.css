@@ -1,33 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
     scroll-behavior: smooth;
     font-size: 16px;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Search  */
-.search-section{
+.search-section {
     text-align: center;
 }
 
-.title{
-    font-size: 24px;
+.title {
+    font-size: 30px;
     background-color: black;
     color: white;
     padding: 15px 0;
-}
-.title-letter{
-    font-size: 30px;
-    color: Red;
+    letter-spacing: 5px;
+    font-family: 'Rubik Vinyl', cursive;
 }
 
-.title-desp{
+.title-letter {
+    font-size: 36px;
+    color: Red;
+    letter-spacing: 2px;
+}
+
+.title-desp {
     margin: 10px 5px 10px;
 }
 
-.search-input{
+.search-input {
     border-radius: 5px;
     padding: 2px 5px;
     margin: 10px;
@@ -35,12 +46,12 @@ body{
     width: 300px;
 }
 
-.error{
+.error {
     color: red;
     margin-top: 5px;
 }
 
-.form-input{
+.form-input {
     background-color: #0ea5e9;
     border-radius: 5px;
     width: 350px;
@@ -48,18 +59,18 @@ body{
 }
 
 /* Movies  */
-.movies-section{
+.movies-section {
     width: 70vw;
     margin: 50px auto;
 }
 
-.movies-card{
+.movies-card {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
-.card{
+.card {
     border: 1px solid black;
     border-radius: 15px;
     padding: 15px 20px;
@@ -71,31 +82,32 @@ body{
     height: 320px;
 }
 
-.card:hover{
+.card:hover {
     background-color: #1e293b;
     color: white;
 }
 
-.movie-title{
+.movie-title {
     font-size: 16px;
     transition: 0.3s;
 }
-.card:hover .movie-title{
+
+.card:hover .movie-title {
     transform: translateY(-15px);
 }
 
-.movie-poster{
+.movie-poster {
     height: 250px;
     border-radius: 15px;
     transition: 0.3s;
 }
 
-.card:hover .movie-poster{
+.card:hover .movie-poster {
     transform: scale(1.1);
 }
 
 /* Movie Page */
-.movie-page{
+.movie-page {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -112,18 +124,18 @@ body{
     gap: 20px;
 }
 
-.movie-img{
+.movie-img {
     width: 200px;
     height: 300px;
     border-radius: 10px;
     border: 1px solid white;
 }
 
-.col{
+.col {
     color: white;
 }
 
-.goback-btn{
+.goback-btn {
     margin: 20px auto;
     padding: 10px 15px;
     background-color: white;
@@ -132,7 +144,7 @@ body{
 }
 
 /* Loading  */
-.loading-section{
+.loading-section {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -140,30 +152,34 @@ body{
     align-items: center;
 }
 
-.loading-div{
+.loading-div {
     color: #111827;
     font-size: 30px;
 }
 
 @media (max-width: 600px) {
-    .movies-card{
+    .movies-card {
         grid-template-columns: 1fr;
     }
-    .card{
+
+    .card {
         padding: 15px 20px;
         height: 370px;
     }
-    .movie-poster{
+
+    .movie-poster {
         height: 300px;
     }
 
     .movie-section {
         flex-direction: column;
     }
-    .movie-img{
+
+    .movie-img {
         margin: auto;
     }
-    .goback-btn{
+
+    .goback-btn {
         margin-left: 90px;
     }
 }
