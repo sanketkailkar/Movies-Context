@@ -6,16 +6,17 @@ export default function Search() {
     const { query, setQuery, isError } = useGlobalContext();
 
     return (
-        <section className="">
-            <h2>Search Your Favourite Movie</h2>
-            <form onSubmit={(e) => e.preventDefault()}>
+        <section className="search-section">
+            <h1 className="title"><span className="title-letter">S</span>anket<span className="title-letter">M</span>ovies</h1>
+            <h2 className="title-desp">Search Your Favourite Movie</h2>
+            <form onSubmit={(e) => e.preventDefault()} className="form-input">
                 <div>
-                    <input type="text" placeholder="search here..." className="border-4 border-solid border-slate-950  "
+                    <input type="text" placeholder="search here..." className="search-input"
                         value={query} onChange={(e) => setQuery(e.target.value)} />
                 </div>
             </form>
             <div className="card-error">
-                <p>{isError.show && isError.msg}</p>
+                <p className="error">{isError.show && isError.msg}</p>
             </div>
         </section> 
     )

@@ -2,12 +2,168 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
 
-body{
-  font-size:large;
+/* Search  */
+.search-section{
+    text-align: center;
+}
+
+.title{
+    font-size: 24px;
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+}
+.title-letter{
+    font-size: 30px;
+    color: Red;
+}
+
+.title-desp{
+    margin: 10px 5px 10px;
+}
+
+.search-input{
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin: 10px;
+    outline: none;
+    width: 300px;
+}
+
+.error{
+    color: red;
+    margin-top: 5px;
+}
+
+.form-input{
+    background-color: #0ea5e9;
+    border-radius: 5px;
+    width: 350px;
+    margin: auto;
+}
+
+/* Movies  */
+.movies-section{
+    width: 70vw;
+    margin: 50px auto;
+}
+
+.movies-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 15px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    height: 320px;
+}
+
+.card:hover{
+    background-color: #1e293b;
+    color: white;
+}
+
+.movie-title{
+    font-size: 16px;
+    transition: 0.3s;
+}
+.card:hover .movie-title{
+    transform: translateY(-15px);
+}
+
+.movie-poster{
+    height: 250px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover .movie-poster{
+    transform: scale(1.1);
+}
+
+/* Movie Page */
+.movie-page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.movie-section {
+    display: flex;
+    background-color: #1e293b;
+    padding: 25px;
+    border-radius: 20px;
+    gap: 20px;
+}
+
+.movie-img{
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.col{
+    color: white;
+}
+
+.goback-btn{
+    margin: 20px auto;
+    padding: 10px 15px;
+    background-color: white;
+    color: #1e293b;
+    border-radius: 10px;
+}
+
+/* Loading  */
+.loading-section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-div{
+    color: #111827;
+    font-size: 30px;
+}
+
+@media (max-width: 600px) {
+    .movies-card{
+        grid-template-columns: 1fr;
+    }
+    .card{
+        padding: 15px 20px;
+        height: 370px;
+    }
+    .movie-poster{
+        height: 300px;
+    }
+
+    .movie-section {
+        flex-direction: column;
+    }
+    .movie-img{
+        margin: auto;
+    }
+    .goback-btn{
+        margin-left: 90px;
+    }
 }

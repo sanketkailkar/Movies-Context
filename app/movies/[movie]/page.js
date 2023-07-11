@@ -34,30 +34,31 @@ export default function Movie({ params }) {
 
   if (isLoading) {
     return (
-      <div className="text-center mt-20">
-        <div className=" text-2xl">Loading...</div>
+      <div className="loading-section">
+        <div className="loading-div">Loading...</div>
       </div>
     )
   }
 
   return (<>
-    <section>
-      <div>
-        <figure>
-          <img src={movies.Poster} alt={movies.Title} />
-        </figure>
-      </div>
-      <div className="">
-        <p className="">{movies.Title}</p>
-        <p className=""></p>
-        <p className="">{movies.Released}</p>
-        <p className="">{movies.Genre}</p>
-        <p className="">{movies.Writer}</p>
-        <p className="">{movies.imdbRating} / 10</p>
-        <p className="">{movies.Language}</p>
-        <button onClick={()=> router.push("/")}>Go Back</button>
-      </div>
-  </section></>
+    <div className="movie-page">
+      <section className="movie-section">
+        <div className="col">
+          <figure className="movie-figure">
+            <img src={movies.Poster} alt={movies.Title} className="movie-img"/>
+          </figure>
+        </div>
+        <div className="col">
+          <p>Title:- {movies.Title}</p>
+          <p>Released:- {movies.Released}</p>
+          <p>Genre:- {movies.Genre}</p>
+          <p>Writer:- {movies.Writer}</p>
+          <p>imdb Rating:- {movies.imdbRating} / 10</p>
+          <p>Language:- {movies.Language}</p>
+          <button className="goback-btn" onClick={() => router.push("/")}>Go Back</button>
+        </div>
+      </section>
+    </div>
+  </>
   );
 }
- 
