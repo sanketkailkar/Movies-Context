@@ -54,7 +54,7 @@ body {
 .form-input {
     background-color: #0ea5e9;
     border-radius: 5px;
-    width: 350px;
+    width: 320px;
     margin: auto;
 }
 
@@ -158,17 +158,24 @@ body {
 }
 
 @media (max-width: 600px) {
+    .search-input {
+        width: 250px;
+    }
+
+    .form-input {
+        width: 270px;
+    }
     .movies-card {
         grid-template-columns: 1fr;
     }
 
     .card {
         padding: 15px 20px;
-        height: 370px;
+        height: 320px;
     }
 
     .movie-poster {
-        height: 300px;
+        height: 280px;
     }
 
     .movie-section {
