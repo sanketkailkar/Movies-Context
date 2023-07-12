@@ -80,6 +80,8 @@ body {
     align-items: center;
     transition: 0.3s;
     height: 320px;
+    width: 230px;
+    margin: auto;
 }
 
 .card:hover {
@@ -170,15 +172,14 @@ body {
     }
 
     .card {
-        padding: 15px 20px;
-        height: 320px;
+        height: 340px;
     }
 
     .movie-poster {
         height: 280px;
     }
-
     .movie-section {
+        width: 90vw;
         flex-direction: column;
     }
 

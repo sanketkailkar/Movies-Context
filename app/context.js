@@ -20,6 +20,9 @@ function AppContextProvider({ children }) {
         try {
             const res = await fetch(url);
             const data = await res.json();
+            console.log(data)
+            console.log(data.totalResults)
+            console.log(data.Search.length)
             if (data.Response === "True") {
                 setIsLoading(false);
                 setError({show:false, msg:''})
